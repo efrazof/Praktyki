@@ -24,7 +24,8 @@ SOURCES += main.cpp \
     board.cpp \
     systemcomand.cpp \
     savetofilewithnameandtext.cpp \
-    converter.cpp
+    converter.cpp \
+    readfromtxtfile.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -51,7 +52,8 @@ HEADERS += Game.h \
     checkbuttonpressed.h \
     systemcomand.h \
     savetofilewithnameandtext.h \
-    converter.h
+    converter.h \
+    readfromtxtfile.h
 
 DISTFILES += \
     GameOfLife.pro.user \
