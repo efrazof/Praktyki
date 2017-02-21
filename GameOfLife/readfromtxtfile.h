@@ -1,16 +1,18 @@
 #ifndef READFROMTXTFILE_H
 #define READFROMTXTFILE_H
-#include <fstream>
+#include <iosfwd>
 #include <string>
-#include <iostream>
-#include <stdio.h>
 #include <sstream>
+#include <fstream>
+
 
 class ReadFromTxtFile
 {
 public:
     ReadFromTxtFile();
+
     std::string readTxtFileByName(std::string);
+
 private:
     std::string readBoard;
 };
