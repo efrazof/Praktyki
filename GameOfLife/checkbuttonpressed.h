@@ -15,8 +15,9 @@ public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();
     bool getStatusOfLoop();
-    int getHowManySec();
+    float getHowManySec();
     bool getSaveToFileStatus();
+    void setSaveToFileStatus(bool value);
 };
 
 #endif

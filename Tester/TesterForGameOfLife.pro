@@ -29,7 +29,8 @@ SOURCES += \
     mock_checkbuttonpressed.cpp \
     ../GameOfLife/board.cpp \
     test_converter.cpp \
-    test_fillerwithrandomvalues.cpp
+    test_fillerwithrandomvalues.cpp \
+    ../GameOfLife/systemcomand.cpp
 
 
 
@@ -59,10 +60,14 @@ HEADERS += \
     ../GameOfLife/iteratorOverCells.h \
     ../GameOfLife/rules.h \
     ../GameOfLife/savetofilewithnameandtext.h \
-    mock_checkbuttonpressed.h
+    mock_checkbuttonpressed.h \
+    ../GameOfLife/systemcomand.h
 
 DISTFILES += \
-    TesterForGameOfLife.pro.user
+    TesterForGameOfLife.pro.user \
+    ../GameOfLife/GameOfLife.pro.user \
+    ../GameOfLife/README.md
 
 SUBDIRS += \
+    ../GameOfLife/GameOfLife.pro \
     ../GameOfLife/GameOfLife.pro

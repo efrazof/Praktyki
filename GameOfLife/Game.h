@@ -23,7 +23,7 @@ private:
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
-    systemComand comand;
+    SystemComand comand;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
 };

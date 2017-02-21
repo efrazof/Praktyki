@@ -1,11 +1,11 @@
 #include "systemcomand.h"
 
-systemComand::systemComand()
+SystemComand::SystemComand()
 {
 
 }
 
-void systemComand::sleepFunction(bool loopStatus, float howManySec)
+void SystemComand::sleepFunction(bool loopStatus, float howManySec)
 {
     if (loopStatus == true)
     {
@@ -13,12 +13,12 @@ void systemComand::sleepFunction(bool loopStatus, float howManySec)
     }
 }
 
-void systemComand::cleanFunction()
+void SystemComand::cleanFunction()
 {
     system("cls");
 }
 
-void systemComand::systemPause()
+void SystemComand::systemPause()
 {
     system("pause");
 }

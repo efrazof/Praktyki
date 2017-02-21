@@ -2,10 +2,10 @@
 #define SYSTEMCOMAND_H
 #include "checkbuttonpressed.h"
 
-class systemComand
+class SystemComand
 {
 public:
-    systemComand();
+    SystemComand();
     void sleepFunction(bool loopStatus, float howManySec);
     void cleanFunction();
     void systemPause();

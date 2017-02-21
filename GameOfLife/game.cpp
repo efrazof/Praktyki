@@ -17,7 +17,8 @@ void Game::startInfiniteLoop()
             comand.cleanFunction();
             if (newPressed.getSaveToFileStatus() == true)
             {
-                saveToFile.saveFile("table.txt",converter.getBoardConvertToString());
+                saveToFile.saveFile(converter.getBoardConvertToString());
+                newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
