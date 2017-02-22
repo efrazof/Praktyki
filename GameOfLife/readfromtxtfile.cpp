@@ -5,26 +5,39 @@ ReadFromTxtFile::ReadFromTxtFile()
 
 }
 
+void ReadFromTxtFile::setReadBoard(std::string nameOfFile)
+{
+    std::ifstream file(nameOfFile);
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    readBoard = buffer.str();
+}
+
+ReadFromTxtFile::ReadFromTxtFile(std::__cxx11::string nameOfFile)
+{
+    setReadBoard(nameOfFile);
+    sizeofBoard = new SizeofBoard(readBoard);
+}
+
 std::string ReadFromTxtFile::readTxtFileByName(std::string nameOfFile)
 {
     std::ifstream file(nameOfFile);
-    std::ifstream& r_file = file;
     std::stringstream buffer;
     std::stringstream& r_buffer = buffer;
+    std::vector<bool> row;
+    std::string to;
+
     if(file.good())
     {
-        buffer << file.rdbuf();
         if(checkIfGivenTextCreatesRectangle(r_buffer))
         {
-            readBoard = buffer.str();
+            buffer << file.rdbuf();
+            std::cout<<buffer.str()<<std::endl;
         }
     }
     else std::cout<<"Reading file fail"<<std::endl;
-
-
     return readBoard;
 }
-
 bool ReadFromTxtFile::checkIfGivenTextCreatesRectangle(std::stringstream& p_buffer)
 {
     int lineLenght;
@@ -42,11 +55,11 @@ bool ReadFromTxtFile::checkIfGivenTextCreatesRectangle(std::stringstream& p_buff
         nextLineLenht = line.size();
         if(lineLenght != nextLineLenht)
         {
-               std::cout<<"Error: Line Error in line -  "+std::to_string(counter)<<std::endl;
-               isFileRectangle = false;
+            std::cout<<"Error: Line Error in line -  "+std::to_string(counter)<<std::endl;
+            isFileRectangle = false;
         }
         counter++;
     }
     while(p_buffer.str().size() == 0);
-        return isFileRectangle;
+    return isFileRectangle;
 }
