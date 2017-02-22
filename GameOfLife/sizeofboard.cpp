@@ -12,18 +12,23 @@ SizeofBoard::SizeofBoard(std::__cxx11::string &stringWithBoard)
 
 void SizeofBoard::countTheSizeOfBoard(std::string buffer)
 {
+    int counterOfRows= 0;
     int counterOfColumns = 0;
     std::string to;
     std::stringstream s_buffer;
     s_buffer<<buffer;
     while(std::getline(s_buffer,to,'\n'))
     {
+        counterOfRows = to.size();
         counterOfColumns++;
         std::cout<<"tak wyglada to: "<<to<<std::endl;
+        std::cout<<std::to_string(counterOfColumns)<<std::endl;
         to.clear();
     }
-    setWidth(to.size()+frame);
+    std::cout<<to.size()<<std::endl;
+    setWidth(counterOfRows+frame);
     setHeight(counterOfColumns+frame);
+
 }
 
 int SizeofBoard::getHeight() const
