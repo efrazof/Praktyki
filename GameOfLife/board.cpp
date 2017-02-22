@@ -31,3 +31,8 @@ Board::Board(int newNumberOfRows, int newNumberColumns)
     setNumberOfRow(newNumberOfRows);
     this->theBoard.resize(newNumberOfRows, std::vector<bool>(newNumberColumns));
 }
+
+Board::Board(SizeofBoard sizeFromString)
+{
+    this->theBoard.resize(sizeFromString.getHeight(),std::vector<bool>(sizeFromString.getWidth()));
+}

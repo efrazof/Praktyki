@@ -24,7 +24,12 @@ SOURCES += main.cpp \
     board.cpp \
     systemcomand.cpp \
     savetofilewithnameandtext.cpp \
+<<<<<<< HEAD
     converter.cpp
+=======
+    converter.cpp \
+    readfromtxtfile.cpp
+>>>>>>> 26fcfe3a75bf33f901169699d3a15befb5bd29ed
 
 
 # The following define makes your compiler emit warnings if you use
@@ -51,7 +56,12 @@ HEADERS += Game.h \
     checkbuttonpressed.h \
     systemcomand.h \
     savetofilewithnameandtext.h \
+<<<<<<< HEAD
     converter.h
+=======
+    converter.h \
+    readfromtxtfile.h
+>>>>>>> 26fcfe3a75bf33f901169699d3a15befb5bd29ed
 
 DISTFILES += \
     GameOfLife.pro.user \
