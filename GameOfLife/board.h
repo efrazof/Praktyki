@@ -2,6 +2,7 @@
 #define BOARD_H
 
 #include <vector>
+#include "sizeofboard.h"
 
 const int numberOfRow = 30;
 const int numberOfColumn = 30;
@@ -19,6 +20,7 @@ public:
         theBoard[positionInRow][positionInColumn] = newStateOfCell; }
     Board();
     Board(int numberOfRows, int numberOfColumns);
+    Board(SizeofBoard);
 };
 
 #endif // BOARD_H
