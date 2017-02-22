@@ -7,7 +7,7 @@ Generator::Generator()
 
 Board Generator::generateNextBoard(Board oldBoard)
 {
-    Board newBoard;
+    Board newBoard(oldBoard.getNumberOfRow(),oldBoard.getNumberOfCollumn());
     FillerEmptyBoard empty;
     empty.fillBoard(newBoard);
     IteratorOverCells iterator;

@@ -1,8 +1,11 @@
 #include "Game.h"
 
+Board board;
 
 Game::Game()
 {
+board.setNumberOfRow(20);
+board.setNumberOfCollumn(50);
 filler.fillBoard(board);
 startInfiniteLoop();
 }
@@ -14,14 +17,20 @@ void Game::startInfiniteLoop()
         newPressed.checkStatusOfButtonPressed();
         do
         {
-            system("cls");
+            comand.cleanFunction();
+            if (newPressed.getSaveToFileStatus() == true)
+            {
+                saveToFile.saveFile(converter.getBoardConvertToString());
+                newPressed.setSaveToFileStatus(false);
+            }
             converter.convertBoolBoardToString((board.getTheBoard()));
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
-            Sleep(1000);
+            comand.sleepFunction(newPressed.getStatusOfLoop(),newPressed.getHowManySec());
         }
         while (newPressed.getStatusOfLoop() == true);
-        system("pause");
+        comand.systemPause();
         }
+    comand.cleanFunction();
 }

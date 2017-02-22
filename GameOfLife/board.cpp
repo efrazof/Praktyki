@@ -1,11 +1,33 @@
 #include "board.h"
 
-Board::Board()
+int Board::getNumberOfCollumn() const
 {
-
+    return numberOfCollumn;
 }
 
-Board::Board(int numberOfRows, int numberOfColumns)
+void Board::setNumberOfCollumn(int value)
 {
-    this->theBoard.resize(numberOfColumns, std::vector<bool>(numberOfRows));
+    numberOfCollumn = value;
+}
+
+int Board::getNumberOfRow() const
+{
+    return numberOfRow;
+}
+
+void Board::setNumberOfRow(int value)
+{
+    numberOfRow = value;
+}
+
+Board::Board()
+{
+    this->theBoard.resize(numberOfRow, std::vector<bool>(numberOfCollumn));
+}
+
+Board::Board(int newNumberOfRows, int newNumberColumns)
+{
+    setNumberOfCollumn(newNumberColumns);
+    setNumberOfRow(newNumberOfRows);
+    this->theBoard.resize(newNumberOfRows, std::vector<bool>(newNumberColumns));
 }
