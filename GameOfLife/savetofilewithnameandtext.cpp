@@ -11,7 +11,7 @@ SaveToFileWithNameAndText::SaveToFileWithNameAndText()
 void SaveToFileWithNameAndText::checkIfFileExist()
 {
     struct stat buf;
-    if (stat(fileName.getFileName().c_str(), &buf) != -1)
+    if (stat(filenameReader.getFileName().c_str(), &buf) != -1)
     {
         fileExistStatus = true;
     }
@@ -45,13 +45,13 @@ void SaveToFileWithNameAndText::saveFile(std::vector<std::vector<bool>> boolBoar
 {
     do
     {
-        fileName.askUserAboutFileName();
+        filenameReader.askUserAboutFileName();
         checkIfFileExist();
         ifFileExistAskRenameOrOverwritten();
     }
     while(fileExistStatus == true);
 
-    std::ofstream file(fileName.getFileName());
+    std::ofstream file(filenameReader.getFileName());
         if (file.good())
         {
             for( int i = 1; i<boolBoard.size()-1;i++)

@@ -15,6 +15,7 @@ void Game::readingFromfileTxt()
 
 Game::Game()
 {
+<<<<<<< HEAD
     counterOfIteration = 0;
         int yourChoice;
         do{
@@ -50,6 +51,11 @@ Game::Game()
 void Game::setBoard(const Board &value)
 {
     board = value;
+=======
+counterOfIterations = 0;
+filler.fillBoard(board);
+startInfiniteLoop();
+>>>>>>> cc2823e44aac53b6385277850cb5dc8db8dbd9a0
 }
 
 void Game::startInfiniteLoop()
@@ -68,8 +74,8 @@ void Game::startInfiniteLoop()
             converter.convertBoolBoardToString((board.getTheBoard()));
 
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
-            display.displayCounterOnTheCommandLine(counterOfIteration);
-            counterOfIteration++;
+            display.displayCounterOnTheCommandLine(counterOfIterations);
+            counterOfIterations++;
             board = generator.generateNextBoard(board);
             newPressed.checkStatusOfButtonPressed();
             command.setLoopStatus(newPressed.getStatusOfLoop());

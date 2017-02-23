@@ -32,11 +32,15 @@ private:
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
+<<<<<<< HEAD
 
     std::string fileNameToLoad;
 
     int counterOfIteration;
 
+=======
+    int counterOfIterations;
+>>>>>>> cc2823e44aac53b6385277850cb5dc8db8dbd9a0
 };
 
 #endif

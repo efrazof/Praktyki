@@ -11,7 +11,7 @@ void DisplayGameBoardOnTheCommandLine::displayGameBoardOnTheCommandLine(std::str
         std::cout<<"---------------------------- ";
 }
 
-void DisplayGameBoardOnTheCommandLine::displayCounterOnTheCommandLine(int counterOfIteration)
+void DisplayGameBoardOnTheCommandLine::displayCounterOnTheCommandLine(int counterOfIterations)
 {
-        std::cout<<counterOfIteration<<std::endl;
+        std::cout<<counterOfIterations<<std::endl;
 }

@@ -12,7 +12,7 @@ class SaveToFileWithNameAndText
 {
 private:
     bool fileExistStatus;
-    FilenameReader fileName;
+    FilenameReader filenameReader;
 
 public:
     SaveToFileWithNameAndText();

@@ -8,7 +8,7 @@ private:
     bool loopStatus;
 public:
     SystemCommand();
-    void waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySec);
+    void waitAsLongAsDeclaredToGenerateTheNextBoard(float howManySecondToGenerateNextBoard);
     void cleanCommandPromptFunction();
     void systemPause();
     bool getLoopStatus() const;
