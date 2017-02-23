@@ -13,7 +13,6 @@ class ReadFromTxtFile
 {
 public:
 
-    ReadFromTxtFile();
 
     ReadFromTxtFile(std::string);
 
@@ -24,6 +23,8 @@ public:
 
     SizeofBoard *getSizeofBoard() const;
     void setSizeofBoard(SizeofBoard *value);
+
+    std::string getReadBoard() const;
 
 private:
 

@@ -4,15 +4,18 @@ Board board(20,50);
 
 void Game::readingFromfileTxt()
 {
+    std::cout<<fileNameToLoad<<std::endl;
     ReadFromTxtFile reader(fileNameToLoad);
     Board BoardFromFile(*reader.getSizeofBoard());
     FillWithTxtFile fillerWithTxtFile;
-    fillerWithTxtFile.fillBoardWithString(BoardFromFile,fileNameToLoad);
+    fillerWithTxtFile.fillBoardWithString(BoardFromFile,reader.getReadBoard());
     setBoard(BoardFromFile);
+
 }
 
 Game::Game()
 {
+    counterOfIteration = 0;
         int yourChoice;
         do{
 
@@ -23,13 +26,13 @@ Game::Game()
            std::cout << "0. Exit\n";
            std::cin >> yourChoice;
            switch( yourChoice )  {
-           case 2:
+           case 1:
                std::cout<<"Type file name to load: ";
                std::cin>>fileNameToLoad;
                readingFromfileTxt();
                startInfiniteLoop();
                break;
-           case 1:
+           case 2:
                //load board from image method
                break;
            case 3:
@@ -63,6 +66,7 @@ void Game::startInfiniteLoop()
                 newPressed.setSaveToFileStatus(false);
             }
             converter.convertBoolBoardToString((board.getTheBoard()));
+
             display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
             display.displayCounterOnTheCommandLine(counterOfIteration);
             counterOfIteration++;

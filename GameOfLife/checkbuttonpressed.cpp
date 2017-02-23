@@ -14,12 +14,12 @@ CheckButtonPressed::CheckButtonPressed()
 {
     loopStatus = false;
     saveToFileStatus = false;
-    howManySec = 1;
+    howManySecondToGenerateNextBoard = 1;
 }
 
-float CheckButtonPressed::getHowManySec()
+float CheckButtonPressed::getHowManySecondToGenerateNextBoard()
 {
-    return howManySec;
+    return howManySecondToGenerateNextBoard;
 }
 
 void CheckButtonPressed::checkStatusOfButtonPressed()
@@ -35,11 +35,11 @@ void CheckButtonPressed::checkStatusOfButtonPressed()
     }
     else if(GetAsyncKeyState(VK_ADD))
     {
-        howManySec*=2;
+        howManySecondToGenerateNextBoard*=2;
     }
     else if(GetAsyncKeyState(VK_SUBTRACT))
     {
-        howManySec/=2;
+        howManySecondToGenerateNextBoard/=2;
     }
     else if(GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(0x53))
     {

@@ -17,12 +17,10 @@ SOURCES += main.cpp \
     counterofneighbours.cpp \
     rules.cpp \
     filler.cpp \
-    filleremptyboard.cpp \
     fillerwithrandomvalues.cpp \
     displaygameboardonthecommandline.cpp \
     checkbuttonpressed.cpp \
     board.cpp \
-    systemcomand.cpp \
     savetofilewithnameandtext.cpp \
     converter.cpp \
     readfromtxtfile.cpp \
@@ -50,18 +48,16 @@ HEADERS += Game.h \
     rules.h \
     board.h \
     filler.h \
-    filleremptyboard.h \
     fillerwithrandomvalues.h \
     displaygameboardonthecommandline.h \
     checkbuttonpressed.h \
-    systemcomand.h \
     savetofilewithnameandtext.h \
     converter.h \
     readfromtxtfile.h \
     sizeofboard.h \
     fillwithtxtfile.h \
-    filenamereader.h \
-    systemcommand.h
+    systemcommand.h \
+    filenamereader.h
 
 DISTFILES += \
     GameOfLife.pro.user \

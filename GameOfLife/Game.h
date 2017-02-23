@@ -11,6 +11,9 @@
 #include "readfromtxtfile.h"
 #include <conio.h>
 #include "fillwithtxtfile.h"
+
+
+
 class Game
 {
 public:
@@ -29,7 +32,11 @@ private:
     SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
+
     std::string fileNameToLoad;
+
+    int counterOfIteration;
+
 };
 
 #endif

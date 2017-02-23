@@ -10,12 +10,12 @@ class CheckButtonPressed
 private:
     bool loopStatus;
     bool saveToFileStatus;
-    float howManySec;
+    float howManySecondToGenerateNextBoard;
 public:
     CheckButtonPressed();
     void checkStatusOfButtonPressed();
     bool getStatusOfLoop();
-    float getHowManySec();
+    float getHowManySecondToGenerateNextBoard();
     bool getSaveToFileStatus();
     void setSaveToFileStatus(bool value);
 };
