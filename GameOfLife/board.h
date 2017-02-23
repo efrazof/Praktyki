@@ -18,12 +18,9 @@ public:
         theBoard[positionInRow][positionInColumn] = newStateOfCell; }
 
     Board(int numberOfRows, int numberOfColumns);
-<<<<<<< HEAD
+
     Board(SizeofBoard);
-    int getNumberOfCollumns() const;
-=======
     int getNumberOfColumns() const;
->>>>>>> cc2823e44aac53b6385277850cb5dc8db8dbd9a0
     int getNumberOfRows() const;
 
 };

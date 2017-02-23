@@ -20,6 +20,6 @@ Board::Board(int newNumberOfRows, int newNumberColumns)
 Board::Board(SizeofBoard sizeFromString)
 {
     this->theBoard.resize(sizeFromString.getHeight(),std::vector<bool>(sizeFromString.getWidth()));
-    numberOfCollumns = sizeFromString.getWidth();
+    numberOfColumns = sizeFromString.getWidth();
     numberOfRows = sizeFromString.getHeight();
 }
