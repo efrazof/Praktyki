@@ -5,12 +5,10 @@
 
 class DisplayGameBoardOnTheCommandLine
 {
-private:
-    int coutnerOfIteration;
 public:
     DisplayGameBoardOnTheCommandLine();
     void displayGameBoardOnTheCommandLine(std::string stringConvertedFromBoard);
-    int getCoutnerOfIteration();
+    void displayCounterOnTheCommandLine(int counterOfIteration);
 };
 
 #endif // DISPLAYGAMEBOARDONTHECOMMANDLINE_H

@@ -6,7 +6,7 @@
 #include "displaygameboardonthecommandline.h"
 #include "generator.h"
 #include "checkbuttonpressed.h"
-#include "systemcomand.h"
+#include "systemcommand.h"
 #include "savetofilewithnameandtext.h"
 #include "readfromtxtfile.h"
 #include <conio.h>
@@ -21,13 +21,12 @@ public:
     void readingFromfileTxt();
 
 private:
-    Board board;
     CheckButtonPressed newPressed;
     FillerWithRandomValues filler;
     DisplayGameBoardOnTheCommandLine display;
     Converter converter;
     Generator generator;
-    SystemComand comand;
+    SystemCommand command;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
     std::string fileNameToLoad;

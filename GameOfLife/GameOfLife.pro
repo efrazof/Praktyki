@@ -27,7 +27,9 @@ SOURCES += main.cpp \
     converter.cpp \
     readfromtxtfile.cpp \
     sizeofboard.cpp \
-    fillwithtxtfile.cpp
+    fillwithtxtfile.cpp \
+    filenamereader.cpp \
+    systemcommand.cpp
 
 
 # The following define makes your compiler emit warnings if you use
@@ -57,7 +59,9 @@ HEADERS += Game.h \
     converter.h \
     readfromtxtfile.h \
     sizeofboard.h \
-    fillwithtxtfile.h
+    fillwithtxtfile.h \
+    filenamereader.h \
+    systemcommand.h
 
 DISTFILES += \
     GameOfLife.pro.user \

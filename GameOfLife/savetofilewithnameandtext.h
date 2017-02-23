@@ -5,17 +5,18 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <vector>
+#include "filenamereader.h"
 
 class SaveToFileWithNameAndText
 {
 private:
-    std::string fileName;
     bool fileExistStatus;
+    FilenameReader fileName;
 
 public:
     SaveToFileWithNameAndText();
-    void saveFile(std::string);
-    void askUserFileName();
+    void saveFile(std::vector<std::vector<bool>>);
     void checkIfFileExist();
     void ifFileExistAskRenameOrOverwritten();
 };

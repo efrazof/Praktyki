@@ -8,17 +8,10 @@ SaveToFileWithNameAndText::SaveToFileWithNameAndText()
 }
 
 
-void SaveToFileWithNameAndText::askUserFileName()
-{
-    std::cout<<"Please input a name of file: ";
-    std::cin>>fileName;
-}
-
-
 void SaveToFileWithNameAndText::checkIfFileExist()
 {
     struct stat buf;
-    if (stat(fileName.c_str(), &buf) != -1)
+    if (stat(fileName.getFileName().c_str(), &buf) != -1)
     {
         fileExistStatus = true;
     }
@@ -48,20 +41,27 @@ void SaveToFileWithNameAndText::ifFileExistAskRenameOrOverwritten()
     }
 }
 
-void SaveToFileWithNameAndText::saveFile(std::string text)
+void SaveToFileWithNameAndText::saveFile(std::vector<std::vector<bool>> boolBoard)
 {
     do
     {
-        askUserFileName();
+        fileName.askUserAboutFileName();
         checkIfFileExist();
         ifFileExistAskRenameOrOverwritten();
     }
     while(fileExistStatus == true);
 
-    std::ofstream file(fileName);
+    std::ofstream file(fileName.getFileName());
         if (file.good())
         {
-            file << text;
+            for( int i = 1; i<boolBoard.size()-1;i++)
+            {
+                for( int q = 1; q<boolBoard[i].size()-1;q++)
+                {
+                      file << boolBoard[i][q];
+                }
+                file << '\n';
+            }
         }
         else
         std::cout << "load failed";
