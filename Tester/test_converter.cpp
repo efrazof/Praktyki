@@ -1,5 +1,5 @@
 #include "Tester_Catch.h"
-#include "../GameOfLife/converterboolboardtostring.h"
+#include "../GameOfLife/converter.h"
 #include <vector>
 
 
