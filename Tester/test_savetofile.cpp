@@ -13,9 +13,7 @@ TEST_CASE( "check if text is properly written ", "[test savetofilewithnameandtex
 
     std::fstream file;
     bool checkIfFileOpen;
-    std::string fileName;
-
-
+    
     if (file.open(saveToFile.getFileName()), std::ios::in){
      checkIfFileOpen=true;
     }else{
