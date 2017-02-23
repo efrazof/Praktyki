@@ -22,6 +22,9 @@ public:
     bool checkIfGivenTextCreatesRectangle(std::stringstream&);
 
 
+    SizeofBoard *getSizeofBoard() const;
+    void setSizeofBoard(SizeofBoard *value);
+
 private:
 
     std::string readBoard;

@@ -21,11 +21,9 @@ void SizeofBoard::countTheSizeOfBoard(std::string buffer)
     {
         counterOfRows = to.size();
         counterOfColumns++;
-        std::cout<<"tak wyglada to: "<<to<<std::endl;
-        std::cout<<std::to_string(counterOfColumns)<<std::endl;
         to.clear();
     }
-    std::cout<<to.size()<<std::endl;
+
     setWidth(counterOfRows+frame);
     setHeight(counterOfColumns+frame);
 

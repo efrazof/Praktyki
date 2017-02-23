@@ -10,7 +10,6 @@ public:
 Filler();
 virtual void fillBoard(Board & board)=0;
 
-
 };
 
 #endif // FILLER_H

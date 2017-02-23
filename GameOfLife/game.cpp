@@ -1,6 +1,15 @@
 #include "Game.h"
 
 
+void Game::readingFromfileTxt()
+{
+    ReadFromTxtFile reader(fileNameToLoad);
+    Board BoardFromFile(*reader.getSizeofBoard());
+    FillWithTxtFile fillerWithTxtFile;
+    fillerWithTxtFile.fillBoardWithString(BoardFromFile,fileNameToLoad);
+    setBoard(BoardFromFile);
+}
+
 Game::Game()
 {
         int yourChoice;
@@ -14,7 +23,10 @@ Game::Game()
            std::cin >> yourChoice;
            switch( yourChoice )  {
            case 2:
-               //Load board from txt method
+               std::cout<<"Type file name to load: ";
+               std::cin>>fileNameToLoad;
+               readingFromfileTxt();
+               startInfiniteLoop();
                break;
            case 1:
                //load board from image method
@@ -31,10 +43,15 @@ Game::Game()
         }while (yourChoice != 0);
 }
 
+void Game::setBoard(const Board &value)
+{
+    board = value;
+}
+
 void Game::startInfiniteLoop()
 {
     while(1)
-        {
+    {
         newPressed.checkStatusOfButtonPressed();
         do
         {

@@ -8,14 +8,18 @@
 #include "checkbuttonpressed.h"
 #include "systemcomand.h"
 #include "savetofilewithnameandtext.h"
-
+#include "readfromtxtfile.h"
 #include <conio.h>
-
+#include "fillwithtxtfile.h"
 class Game
 {
 public:
     Game();
     
+    void setBoard(const Board &value);
+
+    void readingFromfileTxt();
+
 private:
     Board board;
     CheckButtonPressed newPressed;
@@ -26,6 +30,7 @@ private:
     SystemComand comand;
     SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
+    std::string fileNameToLoad;
 };
 
 #endif

@@ -13,6 +13,16 @@ void ReadFromTxtFile::setReadBoard(std::string nameOfFile)
     readBoard = buffer.str();
 }
 
+SizeofBoard *ReadFromTxtFile::getSizeofBoard() const
+{
+    return sizeofBoard;
+}
+
+void ReadFromTxtFile::setSizeofBoard(SizeofBoard *value)
+{
+    sizeofBoard = value;
+}
+
 ReadFromTxtFile::ReadFromTxtFile(std::__cxx11::string nameOfFile)
 {
     setReadBoard(nameOfFile);
