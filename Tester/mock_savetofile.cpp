@@ -1,18 +1,21 @@
 #include "mock_savetofile.h"
 
-std::string Mock_savetofile::checkFilename()
-{
-    FilenameReader read;
-    std::string filename="board.txt";
-    read.getFileName()=filename;
-    return filename;
-}
-
 Mock_savetofile::Mock_savetofile(std::vector<std::vector<bool>> boolBoard)
 {
-
-SaveToFileWithNameAndText saveToFile;
-if (checkFilename()=="board.txt"){
-saveToFile.saveFile(boolBoard);}
+    std::ofstream file("testFilenameMockReader.txt");
+        if (file.good())
+        {
+            for( int i = 1; i<boolBoard.size()-1;i++)
+            {
+                for( int q = 1; q<boolBoard[i].size()-1;q++)
+                {
+                      file << boolBoard[i][q];
+                }
+                file << '\n';
+            }
+        }
+        else
+        std::cout << "load failed";
+        file.close();
 
 }
