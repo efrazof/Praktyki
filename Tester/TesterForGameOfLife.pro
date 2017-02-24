@@ -11,7 +11,6 @@ TEMPLATE = app
 
 SOURCES += \
     testmain.cpp \
-    test_filleremptyboard.cpp \
     test_generator.cpp \
     ../GameOfLife/checkbuttonpressed.cpp \
     ../GameOfLife/converterboolboardtostring.cpp \
