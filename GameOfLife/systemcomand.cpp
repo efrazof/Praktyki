@@ -1,4 +1,4 @@
-#include "systemcomand.h"
+#include "systemcommand.h"
 
 SystemComand::SystemComand()
 {

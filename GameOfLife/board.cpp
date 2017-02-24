@@ -1,5 +1,10 @@
 #include "board.h"
 
+Board::Board()
+{
+
+}
+
 int Board::getNumberOfColumns() const
 {
     return numberOfColumns;

@@ -6,13 +6,13 @@
 
 TEST_CASE( "Check if filer fill first row with 1", "[FillerWithRandomValues]" ) {
 
-std::string test = "1111\n0000\n1111\n0000";
-SizeofBoard size(test);
-Board testBoard(size);
-FillWithTxtFile filler;
-filler.fillBoardWithString(testBoard,test);
-for(unsigned positionColumn = 1; positionColumn < testBoard.getTheBoard()[0].size()-1;positionColumn++)
-{
-    CHECK(testBoard.getTheBoard()[1][positionColumn] == 1);
-}
+    std::string test = "1111\n0000\n1111\n0000";
+    SizeofBoard size(test);
+    Board testBoard(size);
+    FillWithTxtFile filler;
+    filler.fillBoardWithString(testBoard,test);
+    for(unsigned positionColumn = 1; positionColumn < testBoard.getTheBoard()[0].size()-1;positionColumn++)
+    {
+        CHECK(testBoard.getTheBoard()[1][positionColumn] == 1);
+    }
 }

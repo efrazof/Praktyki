@@ -13,13 +13,13 @@ TEST_CASE("Check if the positions in vector give proper symbols", "[Converter]")
     std::string testString  = {'x','x','\n','.','x','\n'};
 
 
-Converter *converter=new Converter;
-unsigned sizeOfString = converter->convertBoolBoardToString(testTheBoard).size();
+    Converter *converter=new Converter;
+    unsigned sizeOfString = converter->convertBoolBoardToString(testTheBoard).size();
 
-for(unsigned positionInString = 0 ; positionInString< sizeOfString ;positionInString++)
-{
-    CHECK(converter->convertBoolBoardToString(testTheBoard)[positionInString] == testString[positionInString]);
-}
+    for(unsigned positionInString = 0 ; positionInString< sizeOfString ;positionInString++)
+    {
+        CHECK(converter->convertBoolBoardToString(testTheBoard)[positionInString] == testString[positionInString]);
+    }
     delete converter;
 }
 
