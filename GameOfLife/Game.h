@@ -23,7 +23,7 @@ private:
     Converter converter;
     Generator generator;
     SystemCommand command;
-    SaveToFileWithNameAndText saveToFile;
+    //SaveToFileWithNameAndText saveToFile;
     void startInfiniteLoop();
     int counterOfIterations;
 };

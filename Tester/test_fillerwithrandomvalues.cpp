@@ -10,7 +10,7 @@ FillerWithRandomValues fillerWithRandomValues;
 Board board(20,20);
 fillerWithRandomValues.fillBoard(board);
 
-for(unsigned  positionColumn =0; positionColumn < board.getNumberOfCollumn(); positionColumn++)
+for(unsigned  positionColumn =0; positionColumn < board.getNumberOfColumns(); positionColumn++)
 {
     CHECK(board.getTheBoard()[0][positionColumn] == 0);
 }
@@ -22,7 +22,7 @@ FillerWithRandomValues fillerWithRandomValues;
 Board board(20,20);
 fillerWithRandomValues.fillBoard(board);
 
-for(unsigned positionLine = 0 ; positionLine < board.getNumberOfRow() ; positionLine++)
+for(unsigned positionLine = 0 ; positionLine < board.getNumberOfRows() ; positionLine++)
 {
     CHECK(board.getTheBoard()[positionLine][0] == 0);
 }
@@ -34,9 +34,9 @@ FillerWithRandomValues fillerWithRandomValues;
 Board board(10,20);
 fillerWithRandomValues.fillBoard(board);
 
-for(unsigned positionColumn =0; positionColumn < board.getNumberOfCollumn(); positionColumn++)
+for(unsigned positionColumn =0; positionColumn < board.getNumberOfColumns(); positionColumn++)
 {
-    CHECK(board.getTheBoard()[board.getNumberOfRow()-1][positionColumn] == 0);
+    CHECK(board.getTheBoard()[board.getNumberOfRows()-1][positionColumn] == 0);
 }
 }
 
@@ -47,9 +47,9 @@ FillerWithRandomValues fillerWithRandomValues;
 Board board(10,20);
 fillerWithRandomValues.fillBoard(board);
 
-for(unsigned positionLine = 0 ; positionLine < board.getNumberOfRow(); positionLine++)
+for(unsigned positionLine = 0 ; positionLine < board.getNumberOfRows(); positionLine++)
     {
-    CHECK(board.getTheBoard()[positionLine][board.getNumberOfCollumn()-1] == 0);
+    CHECK(board.getTheBoard()[positionLine][board.getNumberOfColumns()-1] == 0);
     }
 }
 
@@ -60,9 +60,9 @@ FillerWithRandomValues fillerWithRandomValues;
 Board board(20,10);
 fillerWithRandomValues.fillBoard(board);
 
-for(unsigned positionLine = 1 ; positionLine < board.getNumberOfRow() ; positionLine++)
+for(unsigned positionLine = 1 ; positionLine < board.getNumberOfRows() ; positionLine++)
 {
-    for(unsigned positionColumn = 1; positionColumn < board.getNumberOfCollumn();positionColumn++)
+    for(unsigned positionColumn = 1; positionColumn < board.getNumberOfColumns();positionColumn++)
     {
         CHECK(board.getTheBoard()[positionLine][positionColumn] <= 1);
     }

@@ -17,7 +17,6 @@ SOURCES += \
     ../GameOfLife/counterofneighbours.cpp \
     ../GameOfLife/displaygameboardonthecommandline.cpp \
     ../GameOfLife/filler.cpp \
-    ../GameOfLife/filleremptyboard.cpp \
     ../GameOfLife/fillerwithrandomvalues.cpp \
     ../GameOfLife/game.cpp \
     ../GameOfLife/generator.cpp \
@@ -29,7 +28,7 @@ SOURCES += \
     ../GameOfLife/board.cpp \
     test_converter.cpp \
     test_fillerwithrandomvalues.cpp \
-    ../GameOfLife/systemcomand.cpp
+    ../GameOfLife/systemcommand.cpp
 
 
 
@@ -52,7 +51,6 @@ HEADERS += \
     ../GameOfLife/counterofneighbours.h \
     ../GameOfLife/displaygameboardonthecommandline.h \
     ../GameOfLife/filler.h \
-    ../GameOfLife/filleremptyboard.h \
     ../GameOfLife/fillerwithrandomvalues.h \
     ../GameOfLife/Game.h \
     ../GameOfLife/generator.h \
@@ -60,7 +58,7 @@ HEADERS += \
     ../GameOfLife/rules.h \
     ../GameOfLife/savetofilewithnameandtext.h \
     mock_checkbuttonpressed.h \
-    ../GameOfLife/systemcomand.h
+    ../GameOfLife/systemcommand.h
 
 DISTFILES += \
     TesterForGameOfLife.pro.user \
