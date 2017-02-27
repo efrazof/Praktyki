@@ -3,13 +3,11 @@
 
 #include <vector>
 
-const int numberOfRow = 30;
-const int numberOfColumn = 30;
-
 class Board
 {
 private:
     std::vector<std::vector<bool>> theBoard;
+    int numberOfColumns, numberOfRows;
 
 public:
     std::vector<std::vector<bool>> getTheBoard() {return theBoard;}
@@ -17,8 +15,9 @@ public:
         theBoard = newTheBoard; }
     void setStateOfCellInTheBoard(int positionInRow, int positionInColumn, bool newStateOfCell) {
         theBoard[positionInRow][positionInColumn] = newStateOfCell; }
-    Board();
     Board(int numberOfRows, int numberOfColumns);
+    int getNumberOfColumns() const;
+    int getNumberOfRows() const;
 };
 
 #endif // BOARD_H
